@@ -1,4 +1,4 @@
-void muon_lifetime_fit() {
+void muon_fit() {
     // Archivo de entrada
     const char* filename = "vdelta_t.txt";
 
