@@ -7,7 +7,7 @@ Se describen los dos archivos utilizados para el análisis experimental de la vi
 Este programa se encarga de:
 - Leer todos los archivos `.paa` en una carpeta específica.
 - Detectar eventos de decaimiento de muones caracterizados por dos picos en la señal.
-- Calcular el intervalo de tiempo $Delta t$ entre dichos picos.
+- Calcular el intervalo de tiempo $\Delta t$ entre dichos picos.
 - Guardar todos los valores válidos en un archivo `vdelta_t.txt`.
 
 ### `muon_lifetime_fit.C`
