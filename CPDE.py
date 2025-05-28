@@ -4,7 +4,7 @@ import numpy as np
 from scipy.signal import find_peaks
 from paa01 import paaFile
 
-# === CONFIGURACIÓN ===
+# CONFIGURACIÓN
 carpeta = "LA-mml"              # Carpeta con los datos .paa
 umbral = -300                   # Umbral mínimo
 ns_por_punto = 8                # 8 ns por punto
@@ -12,10 +12,10 @@ distancia_minima = 100          # en puntos (~800 ns)
 
 delta_ts = []
 
-# === OBTENER ARCHIVOS .paa ===
+# OBTENER ARCHIVOS .paa
 archivos_paa = glob.glob(os.path.join(carpeta, "*.paa"))
 
-# === PROCESAR CADA ARCHIVO ===
+# PROCESAR CADA ARCHIVO
 for archivo_path in archivos_paa:
     print(f"Procesando: {archivo_path}")
     try:
@@ -35,6 +35,6 @@ for archivo_path in archivos_paa:
     except Exception as e:
         print(f"Error al procesar {archivo_path}: {e}")
 
-# === GUARDAR RESULTADOS ===
+# GUARDAR RESULTADOS
 np.savetxt("vdelta_t.txt", delta_ts, fmt="%.6f")
 print(f"\nGuardados {len(delta_ts)} Δt en vdelta_t.txt")
